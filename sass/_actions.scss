@@ -43,3 +43,26 @@
 .actions__clear-completed:active {
     color: $primary-active;
 }
+
+body.dark .actions__tasks {
+    color: $text-primary-dark;
+}
+
+body.dark .actions__item-filter {
+    color: $text-secondary-dark;
+}
+
+body.dark .actions__item-filter:hover {
+    color: $text-primary-dark;
+}
+
+body.dark .actions__item-filter.--active {
+    color: $primary;
+}
+
+@media (max-width: 600px) {
+    .actions {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+}

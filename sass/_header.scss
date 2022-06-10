@@ -30,3 +30,27 @@
 .header__button .bxs-sun {
     display: none;
 }
+
+body.dark .header__logo {
+    color: $text-primary-dark;
+}
+
+body.dark .header__button {
+    color: $text-primary-dark;
+}
+
+body.dark .header__button:hover {
+    background: rgba($color: #ffffff, $alpha: 0.2);
+}
+
+body.dark .header__button:active {
+    background: rgba($color: #ffffff, $alpha: 0.1);
+}
+
+body.dark .header__button .bxs-sun {
+    display: inline-block;
+}
+
+body.dark .header__button .bxs-moon {
+    display: none;
+}

@@ -22,6 +22,16 @@
   margin: 2.5em 0;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    width: 90%;
+  }
+}
 .header__logo {
   font-size: 2.375em;
   color: #263238;
@@ -52,6 +62,30 @@
 }
 
 .header__button .bxs-sun {
+  display: none;
+}
+
+body.dark .header__logo {
+  color: #eceff1;
+}
+
+body.dark .header__button {
+  color: #eceff1;
+}
+
+body.dark .header__button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .header__button:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .header__button .bxs-sun {
+  display: inline-block;
+}
+
+body.dark .header__button .bxs-moon {
   display: none;
 }
 
@@ -110,6 +144,20 @@
 .form__button:active > .bx-plus {
   transition: 0.2s all ease;
   transform: translateY(-25px);
+}
+
+body.dark .form__control {
+  background: #263238;
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.2);
+  color: #607d8b;
+}
+
+body.dark .form__control::placeholder {
+  color: #607d8b;
+}
+
+body.dark .form__button:hover {
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.2);
 }
 
 .tasks {
@@ -191,6 +239,30 @@
   color: #263238;
 }
 
+body.dark .tasks {
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .card__button {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark .card__text {
+  color: #eceff1;
+}
+
+body.dark .card.--active .card__text {
+  color: #607d8b;
+}
+
+body.dark .card__delete {
+  color: #607d8b;
+}
+
+body.dark .card__delete:hover {
+  color: #eceff1;
+}
+
 .actions {
   display: flex;
   justify-content: space-between;
@@ -237,6 +309,28 @@
   color: #448aff;
 }
 
+body.dark .actions__tasks {
+  color: #eceff1;
+}
+
+body.dark .actions__item-filter {
+  color: #607d8b;
+}
+
+body.dark .actions__item-filter:hover {
+  color: #eceff1;
+}
+
+body.dark .actions__item-filter.--active {
+  color: #2979ff;
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+    gap: 10px 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -246,6 +340,16 @@
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
+}
+
+body.dark {
+  background: #263238;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
