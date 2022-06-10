@@ -28,9 +28,7 @@
         </header>
 
         <div class="form">
-            <div class="form__section">
-                <input type="text" class="form__control" placeholder="Type your task" id="input-task">
-            </div>
+            <input type="text" class="form__control" placeholder="Type your task" id="input-task">
             <div class="form__section">
                 <button class="form__button" id="btn-add-task">
                     <i class='bx bx-plus'></i>
@@ -43,7 +41,7 @@
             <div class="card">
                 <div class="card__status">
                     <button class="card__button">
-                        <i class='bx bx-plus'></i>
+                        <i class='bx bx-check'></i>
                     </button>
                 </div>
                 <div class="card__content">
@@ -54,20 +52,34 @@
                 </a>
             </div>
 
-            <h2 class="tasks__message">No tasks available</h2>
+            <div class="card --active">
+                <div class="card__status">
+                    <button class="card__button --active">
+                        <i class='bx bx-check'></i>
+                    </button>
+                </div>
+                <div class="card__content">
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <a href="#" class="card__delete">
+                    <i class='bx bx-x'></i>
+                </a>
+            </div>
+
+            <!-- <h2 class="tasks__message">No tasks available</h2> -->
         </div>
 
         <div class="actions">
             <div class="actions__counter">
-                <p class="actions__tasks-length">Tasks 2</p>
+                <p class="actions__tasks">Tasks 2</p>
             </div>
             <div class="actions__filter">
-                <a href="#" class="actions__item-fillter" id="all">All</a>
-                <a href="#" class="actions__item-fillter" id="active">Active</a>
-                <a href="#" class="actions__item-fillter" id="completed">Completed</a>
+                <a href="#" class="actions__item-filter --active" id="btn-all">All</a>
+                <a href="#" class="actions__item-filter" id="btn-active">Active</a>
+                <a href="#" class="actions__item-filter" id="btn-completed">Completed</a>
             </div>
             <div class="actions__clear">
-                <a href="#" class="actions__clear-completed">Clear completed</a>
+                <a href="#" class="actions__clear-completed" id="btn-clear-completed">Clear completed</a>
             </div>
         </div>
 

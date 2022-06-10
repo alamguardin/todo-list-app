@@ -1,0 +1,22 @@
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.header {
+    margin-top: 5em;
+    margin-bottom: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tasks {
+    margin: 2.5em 0;
+}
