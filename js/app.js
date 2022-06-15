@@ -1,8 +1,10 @@
+import Render from './render.js';
 import Task from './task.js';
 
 class App {
     constructor() {
         this.tasks = JSON.parse(localStorage.getItem('tasks'));
+        this.render = new Render();
 
         if (this.tasks === null) {
             this.tasks = [];
@@ -32,6 +34,14 @@ class App {
 
         this.tasks.splice(index, 1);
         this.saveInStorage();
+    }
+
+    renderDOM() {
+        if (this.tasks.length > 0) {
+            this.render.renderDOM(this.tasks)
+        } else {
+            console.log('Nothing for see')
+        }
     }
 
 }
