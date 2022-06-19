@@ -166,6 +166,13 @@ body.dark .form__button:hover {
   overflow: hidden;
 }
 
+.tasks__message {
+  text-align: center;
+  font-size: 1.125em;
+  color: #78909c;
+  margin: 0.625rem 0;
+}
+
 .card {
   position: relative;
   padding: 0.625em 1.25em;
@@ -204,7 +211,6 @@ body.dark .form__button:hover {
 }
 
 .card__button .bx-check {
-  transform: translateY(15px);
   transition: 0.1s all ease;
 }
 

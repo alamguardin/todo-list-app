@@ -16,6 +16,7 @@ class App {
 
         this.tasks.push(task);
         this.saveInStorage();
+        this.renderDOM()
     }
 
     saveInStorage() {
@@ -27,6 +28,7 @@ class App {
 
         this.tasks[index].status = !this.tasks[index].status;
         this.saveInStorage();
+        this.renderDOM()
     }
 
     deleteTask(id) {
@@ -34,13 +36,15 @@ class App {
 
         this.tasks.splice(index, 1);
         this.saveInStorage();
+        this.renderDOM()
     }
 
     renderDOM() {
         if (this.tasks.length > 0) {
-            this.render.renderDOM(this.tasks)
+            this.render.renderDOM(this.tasks);
         } else {
-            console.log('Nothing for see')
+            const tasksContainer = document.querySelector('#tasks-container');
+            tasksContainer.innerHTML = '<h2 class="tasks__message">No tasks available</h2>';
         }
     }
 

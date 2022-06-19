@@ -4,6 +4,13 @@
     overflow: hidden;
 }
 
+.tasks__message {
+    text-align: center;
+    font-size: 1.125em;
+    color: $text-secondary-light;
+    margin: 0.625rem 0;
+}
+
 .card {
     position: relative;
     padding: 0.625em 1.25em;
@@ -42,7 +49,7 @@
 }
 
 .card__button .bx-check {
-    transform: translateY(15px);
+    // transform: translateY(15px);
     transition: .1s all ease;
 } 
 

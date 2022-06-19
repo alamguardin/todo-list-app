@@ -38,34 +38,6 @@
 
         <div class="tasks" id="tasks-container">
 
-            <div class="card">
-                <div class="card__status">
-                    <button class="card__button">
-                        <i class='bx bx-check'></i>
-                    </button>
-                </div>
-                <div class="card__content">
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <a href="#" class="card__delete">
-                    <i class='bx bx-x'></i>
-                </a>
-            </div>
-
-            <div class="card --active">
-                <div class="card__status">
-                    <button class="card__button --active">
-                        <i class='bx bx-check'></i>
-                    </button>
-                </div>
-                <div class="card__content">
-                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <a href="#" class="card__delete">
-                    <i class='bx bx-x'></i>
-                </a>
-            </div>
-
             <!-- <h2 class="tasks__message">No tasks available</h2> -->
         </div>
 
@@ -84,6 +56,23 @@
         </div>
 
     </div>
+
+    <!-- Template task -->
+    <template id="template-task">
+        <div class="card">
+            <div class="card__status">
+                <button class="card__button">
+                    <i class='bx bx-check'></i>
+                </button>
+            </div>
+            <div class="card__content">
+                <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <a href="#" class="card__delete">
+                <i class='bx bx-x'></i>
+            </a>
+        </div>
+    </template>
 
     <!-- Scripts -->
     <script type="module" src="js/index.js"></script>
