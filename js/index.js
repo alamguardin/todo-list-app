@@ -2,10 +2,13 @@ import App from "./app.js";
 
 const app = new App();
 app.renderDOM();
-    
+
+const btnTheme = document.querySelector('#btn-toggle-theme');
 const inputTask = document.querySelector('#input-task');
 const btnAddTask = document.querySelector('#btn-add-task');
 const tasksContainer = document.querySelector('#tasks-container');
+
+btnTheme.addEventListener('click', () => { app.setTheme() });
 
 btnAddTask.addEventListener('click', () => {
     if (inputTask.value.length > 0) {
