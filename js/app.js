@@ -6,6 +6,7 @@ class App {
         this.tasks = JSON.parse(localStorage.getItem('tasks'));
         this.render = new Render();
         this.darkMode = JSON.parse(localStorage.getItem('theme'));
+        this.filter = '';
 
         if (this.tasks === null) {
             this.tasks = [];
@@ -44,9 +45,25 @@ class App {
         this.renderDOM()
     }
 
+    setFilter(filter) {
+        this.filter = filter;
+        this.renderDOM();
+    }
+
     renderDOM() {
         if (this.tasks.length > 0) {
-            this.render.renderDOM(this.tasks);
+            switch (this.filter) {
+                case 'Active':
+                    this.render.renderDOM(this.tasks.filter(element => element.status === false));
+                    break;
+                case 'Completed':
+                    this.render.renderDOM(this.tasks.filter(element => element.status === true));
+                    break;
+                case 'All':
+                default:
+                    this.render.renderDOM(this.tasks);
+                    break;
+            }
         } else {
             const tasksContainer = document.querySelector('#tasks-container');
             tasksContainer.innerHTML = '<h2 class="tasks__message">No tasks available</h2>';
@@ -68,6 +85,10 @@ class App {
         } else {
             document.body.classList.remove('dark');
         }
+    }
+
+    getTasksLength() {
+        return this.tasks.length;
     }
 
 }
