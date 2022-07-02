@@ -91,6 +91,12 @@ class App {
         return this.tasks.length;
     }
 
+    deleteTasksComplete() {
+        this.tasks = this.tasks.filter(element => element.status === false);
+        this.saveInStorage();
+        this.renderDOM();
+    }
+
 }
 
 export default App;

@@ -8,6 +8,7 @@ const inputTask = document.querySelector('#input-task');
 const btnAddTask = document.querySelector('#btn-add-task');
 const tasksContainer = document.querySelector('#tasks-container');
 const filterContainer = document.querySelector('.actions .actions__filter');
+const btnClearCompleted = document.querySelector('#btn-clear-completed');
 
 btnTheme.addEventListener('click', () => { app.setTheme() });
 
@@ -43,6 +44,11 @@ filterContainer.addEventListener('click', (e) => {
         e.target.classList.add('--active');
         app.setFilter(e.target.textContent);
     }
+})
+
+btnClearCompleted.addEventListener('click', () => { 
+    app.deleteTasksComplete();
+    showTasksLength()
 })
 
 const showTasksLength = () => {
